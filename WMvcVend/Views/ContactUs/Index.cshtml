@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_InnerPage.cshtml";
+}
+
+<h2>Subscription Request</h2>
+
+
+<div align="left">
+    <table cellpadding="2"
+           class="table"
+           cellspacing="2"
+           border="1">
+        <tr class="btn-primary">
+            <th> Name</th>
+            <th> Email</th>
+            <th> Message</th>
+        </tr>
+        @foreach (var Prod in ViewBag.listcontactus)
+        {
+        <tr class="btn-success">
+            <td>
+                @Prod.Name
+            </td>
+            <td>
+                @Prod.Email
+            </td>
+            <td>
+                @Prod.Message
+            </td>
+        </tr>
+        }
+    </table>
+</div>

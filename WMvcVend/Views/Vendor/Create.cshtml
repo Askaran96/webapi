@@ -1,0 +1,95 @@
+﻿@model WMvcVend.ViewModel.VendorViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_InnerPage.cshtml";
+}
+
+<h2>Create</h2>
+
+<div align = "center" >
+@using (Html.BeginForm("create", "Vendor", FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendor.VendorName)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendor.VendorName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendor.Address)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendor.Address)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendor.City)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendor.City)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendor.ContactPerson)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendor.ContactPerson)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendor.Email)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendor.Email)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendor.Phone)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendor.Phone)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendor.State)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendor.State)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendor.ZipCode)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendor.ZipCode)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+
+            <td>
+                <input type="submit" value="Save" class="btn-primary" />
+            </td>
+        </tr>
+    </table>
+}
+    </div>

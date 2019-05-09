@@ -1,0 +1,50 @@
+﻿@model WMvcPro.ViewModel.ContacUsViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_InnerPage.cshtml";
+}
+
+<h2>Subscription Details</h2>
+
+<div align = "center" >
+@using (Html.BeginForm("create", "ContactUs", FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.contacUs.Name)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.contacUs.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.contacUs.Email)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.contacUs.Email)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.contacUs.Message)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.contacUs.Message)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+
+            <td>
+                <input type="submit" value="Save" class="btn-primary" />
+            </td>
+        </tr>
+    </table>
+}
+    </div>

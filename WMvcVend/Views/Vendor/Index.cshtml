@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_InnerPage.cshtml";
+}
+
+<h2>Vendor Details</h2>
+
+
+<div align="left">
+    @Html.ActionLink("Create", "Create", "Vendor", new { area = "" }, null)
+    <br /><br />
+    <table cellpadding="2"
+           class="table"
+           cellspacing="2"
+           border="1">
+        <tr class="btn-primary">
+
+            <th> Vendor Name</th>
+            <th> Address</th>
+            <th> City</th>
+            <th> Contact Person</th>
+            <th> Email</th>
+            <th> Phone</th>
+            <th> State</th>
+            <th> Zip Code</th>
+            <th> Action</th>
+        </tr>
+        @foreach (var vend in ViewBag.listVendors)
+        {
+        <tr class="btn-success">
+
+            <td>
+                @vend.VendorName
+            </td>
+            <td>
+                @vend.Address
+            </td>
+            <td>
+                @vend.City
+            </td>
+            <td>
+                @vend.ContactPerson
+            </td>
+            <td>
+                @vend.Email
+            </td>
+            <td>
+                @vend.Phone
+            </td>
+            <td>
+                @vend.State
+            </td>
+            <td>
+                @vend.ZipCode
+            </td>
+            <td>
+                <a onclick="return confirm('Do you want to Delete?')"
+                   href="@Url.Action("Delete","Vendor",new {id= vend.VendorId})">Delete</a> ||
+                <a href="@Url.Action("Edit","Vendor",new {id= vend.VendorId})">Edit</a>
+            </td>
+
+        </tr>
+        }
+    </table>
+</div>

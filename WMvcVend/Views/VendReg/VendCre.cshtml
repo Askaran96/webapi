@@ -1,0 +1,96 @@
+﻿@model WMvcVend.ViewModel.VendRegViewModel
+@{
+    ViewBag.Title = "VendCre";
+    Layout = "~/Views/Shared/_InnerPage.cshtml";
+}
+
+<h2>Subscription Details</h2>
+
+<div align="center">
+    @using (Html.BeginForm("VendCre", "VendReg", FormMethod.Post))
+    {
+    <table class="table">
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendReg.Name)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendReg.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendReg.Mobile)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendReg.Mobile)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendReg.Email)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendReg.Email)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendReg.Address)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendReg.Address)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendReg.State)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendReg.State)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendReg.ZipCode)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendReg.ZipCode)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendReg.CompanyName)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendReg.CompanyName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.vendReg.CompanyType)
+            </td>
+
+            <td>
+                @Html.TextBoxFor(model => model.vendReg.CompanyType)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+
+            <td>
+                <input type="submit" value="Save" class="btn-primary" />
+            </td>
+        </tr>
+    </table>
+    }
+</div>
+
+

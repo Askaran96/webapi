@@ -1,0 +1,97 @@
+﻿@model WMvcVend.ViewModel.VendorViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_InnerPage.cshtml";
+}
+
+
+<h2> Edit </h2>
+<div align="center" width="500px">
+    @using (Html.BeginForm("Edit", "Vendor", FormMethod.Post))
+    {
+        <table class="table"
+               width="400px"
+               cellpadding="20">
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.vendor.VendorName)
+                </td>
+
+                <td>
+                    @Html.TextBoxFor(model => model.vendor.VendorName)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.vendor.Address)
+                </td>
+
+                <td>
+                    @Html.TextBoxFor(model => model.vendor.Address)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.vendor.City)
+                </td>
+
+                <td>
+                    @Html.TextBoxFor(model => model.vendor.City)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.vendor.ContactPerson)
+                </td>
+
+                <td>
+                    @Html.TextBoxFor(model => model.vendor.ContactPerson)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.vendor.Email)
+                </td>
+
+                <td>
+                    @Html.TextBoxFor(model => model.vendor.Email)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.vendor.Phone)
+                </td>
+
+                <td>
+                    @Html.TextBoxFor(model => model.vendor.Phone)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.vendor.State)
+                </td>
+
+                <td>
+                    @Html.TextBoxFor(model => model.vendor.State)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.vendor.ZipCode)
+                </td>
+
+                <td>
+                    @Html.TextBoxFor(model => model.vendor.ZipCode)
+                </td>
+            </tr>
+            <tr>
+                <td> </td>
+
+                <td>
+                    <input type="submit" value="Save" class="btn-primary" /> &nbsp; <a class="btn-primary" style="padding:5px;" href="@Url.Action("Index","Vendor")"> Back </a>
+                    @Html.HiddenFor(model => model.vendor.VendorId)
+                </td>
+            </tr>
+        </table>
+    }
+</div>
