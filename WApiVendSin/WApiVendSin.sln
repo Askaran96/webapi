@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WApiVend", "..\WApiVend\WApiVend.csproj", "{5E006994-6E97-4374-9007-3647846FBE05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMvcVend", "..\WMvcVend\WMvcVend.csproj", "{2F77C921-BC3A-4509-8F7C-132003A01D2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E006994-6E97-4374-9007-3647846FBE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E006994-6E97-4374-9007-3647846FBE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E006994-6E97-4374-9007-3647846FBE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E006994-6E97-4374-9007-3647846FBE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F77C921-BC3A-4509-8F7C-132003A01D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F77C921-BC3A-4509-8F7C-132003A01D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F77C921-BC3A-4509-8F7C-132003A01D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F77C921-BC3A-4509-8F7C-132003A01D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4433F6CA-543F-4E6B-95F3-D98130EAA20A}
+	EndGlobalSection
+EndGlobal
